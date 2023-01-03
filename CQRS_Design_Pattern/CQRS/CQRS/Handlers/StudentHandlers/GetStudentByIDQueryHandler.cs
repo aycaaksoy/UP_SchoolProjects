@@ -1,0 +1,29 @@
+﻿using CQRS.CQRS.Queries.StudentQueries;
+using CQRS.CQRS.Results.StudentResults;
+using CQRS.DAL.Context;
+
+namespace CQRS.CQRS.Handlers.StudentHandlers
+{
+    public class GetStudentByIDQueryHandler
+    {
+        private readonly ProductContext _context;
+
+        public GetStudentByIDQueryHandler(ProductContext context)
+        {
+            _context = context;
+        }
+
+        public GetStudentByIDQueryResult Handle(GetStudentByIDQuery query)
+        {
+            var values = _context.Students.Find(query.id);
+            return new GetStudentByIDQueryResult
+            {
+                Age = values.Age,
+                City = values.City,
+                Name = values.Name,
+                Surname = values.Surname,
+                StudentID = values.StudentID
+            };
+        }
+    }
+}

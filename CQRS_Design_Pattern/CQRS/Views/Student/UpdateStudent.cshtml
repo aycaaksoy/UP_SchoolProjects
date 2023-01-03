@@ -1,0 +1,29 @@
+﻿@using CQRS.CQRS.Results.StudentResults
+@model GetStudentByIDQueryResult
+@{
+    ViewData["Title"] = "UpdateStudent";
+}
+
+<h1>UpdateStudent</h1>
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+    <form method="post">
+        <input type="hidden" asp-for="StudentID" />
+        <br />
+        <label>Student Name</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <label>Student Surname</label>
+        <input type="text" asp-for="Surname" class="form-control" />
+        <br />
+        <label>City</label>
+        <input type="text" asp-for="City" class="form-control" />
+        <br />
+        <label>Age</label>
+        <input type="text" asp-for="Age" class="form-control" />
+        <br />
+        <button class="btn btn-outline-success">Edit Student</button>
+    </form>
+</div>

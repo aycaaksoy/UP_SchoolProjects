@@ -1,0 +1,25 @@
+﻿@using CQRS.CQRS.Results.ProductResults
+@model GetProductHumanResourceByIDQueryResult
+@{
+    ViewData["Title"] = "GetHumanResourceIndex";
+}
+
+<h1>GetHumanResourceIndex</h1>
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+    <h2>Human Resources Product</h2>
+    <label>Product ID</label>
+    <input type="text" asp-for="ProductId" class="form-control" />
+    <br />
+    <label>Product Name</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Brand</label>
+    <input type="text" asp-for="Brand" class="form-control" />
+    <br />
+    <label>Price</label>
+    <input type="text" asp-for="SalePrice" class="form-control" />
+    <br />
+</div>
