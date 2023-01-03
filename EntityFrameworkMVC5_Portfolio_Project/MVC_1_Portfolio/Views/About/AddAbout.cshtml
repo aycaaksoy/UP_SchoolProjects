@@ -1,0 +1,28 @@
+﻿@model MVC_1_Portfolio.Models.Entities.About
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<h2>Add About Section</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.AboutID, new { @class = "form-control" })
+    
+    <label> Name Surname</label>
+    @Html.TextBoxFor(x => x.Name_Surname, new { @class = "form-control" })
+    <br />
+    <label> Title</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label> Description</label>
+
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label> Image Url</label>
+
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Add New Record</button>
+
+</form>

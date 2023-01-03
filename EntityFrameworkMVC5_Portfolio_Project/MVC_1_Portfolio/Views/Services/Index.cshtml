@@ -1,0 +1,33 @@
+﻿@using MVC_1_Portfolio.Models.Entities;
+@model List<Service>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+    int counter = 0;
+    }
+
+<h2>Services</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Service</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        counter += 1;
+                <tr>
+                    <td>@item.ServicesId</td>
+                    <td>@item.Title</td>
+                    <td><a href="/Services/DeleteService/@item.ServicesId" class="btn btn-danger">Delete</a></td>
+                    <td><a href="/Services/UpdateService/@item.ServicesId" class="btn btn-success">Update</a></td>
+                </tr>
+            }
+
+   
+</table>
+
+<a href="/Services/AddService/" class="btn btn-primary">Add New Record </a>

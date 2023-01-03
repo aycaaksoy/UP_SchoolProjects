@@ -1,0 +1,28 @@
+﻿@model List<MVC_1_Portfolio.Models.Entities.Message>
+@{
+    ViewBag.Title = "Inbox";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+    int counter = 0;
+}
+
+
+<h2>Outbox</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Receiver</th>
+        <th>Subject</th>
+        <th>Send Message</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@counter</td>
+            <td>@item.ReceiverNameSurname</td>
+            <td>@item.MessageSubject</td>
+            <td><a href="/Message/MessageDetails/@item.MessageId" class="btn btn-primary">Open Message</a></td>
+        </tr>
+    }
+</table>
