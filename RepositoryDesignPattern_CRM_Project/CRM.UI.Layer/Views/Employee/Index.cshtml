@@ -1,0 +1,43 @@
+﻿@model List<CRM.Entity.Layer.Concrete.Employee>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_CRMLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Staff</th>
+        <th>Department</th>
+        <th>Delete</th>
+        <th>Edit</th>
+        <th>Tasks</th>
+        <th>Status</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmployeeId</td>
+            <td>@item.EmployeeName @item.EmployeeSurname</td>
+            <td>@item.Category.CategoryName</td>
+            <td><a href="/Employee/DeleteEmployee/@item.EmployeeId" class="btn btn-outline-danger">Delete</a></td>
+            <td><a href="/Employee/EditEmployee/@item.EmployeeId" class="btn btn-outline-success">Edit</a></td>
+            <td><a href="#" class="btn btn-outline-dark">Tasks</a></td>
+            @{
+                if (item.EmployeeStatus == true)
+                {
+                    <td><a href="/Employee/ChangeStatusToFalse/@item.EmployeeId" class="btn btn-outline-warning">Switch to NOT Active</a></td>
+                }
+                else
+                {
+                    <td><a href="/Employee/ChangeStatusToTrue/@item.EmployeeId" class="btn btn-outline-danger">Switch to Active</a></td>
+                }
+            }
+        </tr>
+    }
+</table>
+<a href="/Employee/AddEmployee/" class="btn btn-outline-primary">Add New Employee</a>
+
+

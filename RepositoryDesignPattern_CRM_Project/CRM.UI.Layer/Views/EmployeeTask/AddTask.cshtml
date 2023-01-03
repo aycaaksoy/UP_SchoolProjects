@@ -1,0 +1,19 @@
+﻿@model EmployeeTask
+@{
+    ViewData["Title"] = "AddTask";
+    Layout = "~/Views/Shared/_CRMLayout.cshtml";
+}
+
+<br />
+<form method="post">
+    <label>Staff</label>
+    @Html.DropDownListFor(x => x.AppUserID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+    <br />
+    <label>Task</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Task Description</label>
+    <textarea cols="2" rows="5" class="form-control" asp-for="Details"></textarea>
+    <br />
+    <button class="btn btn-outline-info">Add Task Description</button>
+</form>

@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_CRMLayout.cshtml";
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<h1>Customer Ajax Functions</h1>
+<br />
+<button type="button" id="btncustomerlist" class="btn btn-outline-dark">Customer List</button>
+<button type="button" id="btncustomeradd" class="btn btn-outline-dark">Add Customer </button>
+<button type="button" id="btncustomerget" class="btn btn-outline-dark">Show Customer</button>
+<button type="button" id="btncustomerdelete" class="btn btn-outline-dark">Delete Customer</button>
+<button type="button" id="btncustomerupdate" class="btn btn-outline-dark">Edit Customer</button>
+<br />
+
+<div id="customerlist">
+
+</div>
+<br />
+
+<div class="form-group">
+    <input type="text" id="txtcustomername" placeholder="Customer name" class="form-control" />
+    <input type="text" id="txtcustomersurname" placeholder="Customer surname" class="form-control" />
+    <input type="text" id="txtcustomermail" placeholder="Customer email" class="form-control" />
+   
+</div>
+<div class="form-group">
+    <input type="text" id="txtid" placeholder="search id" class="form-control" />
+   
+</div>
+<div id="customergetbyid">
+
+</div>
+<div>
+    <input type="text" class="form-control" id="txtdeleteid" placeholder="Delete Id" />
+
+</div>
+<br />
+<div class="form-group">
+    <h4>Update your info</h4>
+    <input type="text" class="form-control" id="txtname" placeholder="Delete Name" />
+    <input type="text" class="form-control" id="txtsurname" placeholder="Delete Surname" />
+    <input type="text" class="form-control" id="txtemail" placeholder="Delete email" />
+    <input type="text" class="form-control" id="txtphone" placeholder="Delete phone" />
+</div>
+<script>
+
+    $("#btncustomerlist").click(function () {
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            type: "get",
+            url: "/Admin/AdminCustomer/CustomerList/",
+            success: function (funk1) {
+                let values = jQuery.parseJSON(funk1);
+                console.log(values);
+
+             
+                let tablehtml="<table class= table table-bordered><tr><th>Customer ID</th></table>"
+                $.each(values,(index,item)=>
+                {
+                    tablehtml+= `<tr><td>${item.CustomerID}</td>`
+                });
+
+                tablehtml+="</table>";
+                $("#customerlist").html(tablehtml);
+            }
+        });
+    });
+    $("#btncustomeradd").click(function () {
+        let customervalues = {
+            CustomerName: $("#txtcustomername").val(),
+            CustomerSurname: $("#txtcustomersurname").val(),
+            CustomerMail: $("#txtcustomermail").val(),
+            CustomerPhone: $("#txtcustomerphone").val()
+        };
+
+        $.ajax({
+            type: "post",
+            url: "/Admin/AdminCustomer/AddCustomer/",
+            data: customervalues,
+            success: function (funk2) {
+                let result = jQuery.parseJSON(funk2);
+                alert("Müşteri başarılı bir şekilde eklendi");
+            }
+        });
+    });
+    $("#btncustomerget").click(x => {
+        let id = $("#txtid").val();
+
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            type: "get",
+            url: "/Admin/AdminCustomer/GetByID/",
+            data: { CustomerID: id },
+            success: function (funk3) {
+                let result = jQuery.parseJSON(funk3);
+                console.log(result);
+
+                let tablehtml2 = <table class=table table-bordered > <tr><th>Müşteri ID < /th><th>Müşteri Adı</th > <th>Müşteri Soyadı < /th></tr > <tr><td>${ result.CustomerID } </td><td>${result.CustomerName}</td > <td>${ result.CustomerSurname } </td></tr > </table>;
+                $("#customergetbyid").html(tablehtml2);
+            }
+        });
+    });
+    $("#btncustomerdelete").click(x => {
+        let id = $("#txtdeleteid").val();
+
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            type: "get",
+            url: "/Admin/AdminCustomer/DeleteCustomer/" + id,
+            
+            success: function (funk4) {
+                alert("Customer Deleted Successfully");
+            }
+        });
+    });
+    $("#btncustomerupdate").click(x => {
+        let values = {
+            CustomerName: $("#txtname").val(),
+            CustomerSurname: $("#txtsurname").val(),
+            CustomerEmail: $("#txtemail").val(),
+            CustomerPhone: $("#txtphone").val()
+        };
+
+        $.ajax({
+            
+            type: "get",
+            url: "/Admin/AdminCustomer/UpdateCustomer/",
+            data:values,
+
+            success: function (funk5) {
+                alert("Customer Updated Successfully");
+            }
+        });
+    });
+    $(#idname).click(function (){
+
+
+    })
+</script>

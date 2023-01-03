@@ -1,0 +1,29 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "EditEmployee";
+    Layout = "~/Views/Shared/_CRMLayout.cshtml";
+}
+   
+
+
+<h1>Edit Employee</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="EmployeeId" />
+    <label>Employee Name</label>
+    <input type="text" asp-for="EmployeeName" class="form-control" />
+    <br />
+    <label>Employee Surname</label>
+    <input type="text" asp-for="EmployeeSurname" class="form-control" />
+    <br />
+    <label>Employee E-Mail</label>
+    <input type="text" asp-for="EmployeeMail" class="form-control" />
+    <br />
+    <label>Employee Photo</label>
+    <input type="text" asp-for="EmployeeImage" class="form-control" />
+    <br />
+    <label>Employee Department</label>
+    <input type="text" asp-for="CategoryID" class="form-control" />
+    <br />
+    <button class="btn btn-warning">Update</button>
+</form>

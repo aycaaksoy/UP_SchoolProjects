@@ -1,0 +1,33 @@
+﻿@model CRM.Entity.Layer.Concrete.Employee
+@{
+    ViewData["Title"] = "AddEmployee";
+    Layout = "~/Views/Shared/_CRMLayout.cshtml";
+}
+
+<h1>Add Employee</h1>
+
+<form method="post">
+    <label>Employee Name</label>
+    <input type="text" asp-for="EmployeeName" class="form-control" />
+    <span asp-validation-for="EmployeeName" class="text-danger"></span>
+    <br />
+    <label>Employee Surname</label>
+    <input type="text" asp-for="EmployeeSurname" class="form-control" />
+    <span asp-validation-for="EmployeeSurname" class="text-danger"></span>
+    <br />
+    <label>Employee E-mail</label>
+    <input type="text" asp-for="EmployeeMail" class="form-control" />
+    <span asp-validation-for="EmployeeMail" class="text-danger"></span>
+    <br />
+    <label>Employee Photo</label>
+    <input type="text" asp-for="EmployeeImage" class="form-control" />
+    <span asp-validation-for="EmployeeImage" class="text-danger"></span>
+    <br />
+    <label>Employee Department</label>
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+    <span asp-validation-for="CategoryID" class="text-danger"></span>
+    <br />
+    <button class="btn btn-info">Save</button>
+
+</form>
+
