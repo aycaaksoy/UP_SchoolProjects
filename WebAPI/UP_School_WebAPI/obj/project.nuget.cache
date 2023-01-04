@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4UzsEVqAuhxmg1wphtfIySa1df00alFqQi6vUwwfv/HKuiU673YG/6yzF5W74Nc6N3RQch4aJNM6TO9qPlbjGQ==",
+  "dgSpecHash": "z1M+qazEhZf2dBjHi1JEutQMIO2T4jZ5+G2TVkvTLXklP/wX9r4L9AM/I3CE9L9Q6SGsa68n6thqlI73RfI7ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aycaa\\source\\repos\\UP_School_WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aycaa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\aycaa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aycaa\\source\\repos\\UP_School_WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj": {}
+    "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aycaa\\source\\repos\\UP_School_WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj": {
+    "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aycaa\\source\\repos\\UP_School_WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj",
         "projectName": "UP_School_WebAPI",
-        "projectPath": "C:\\Users\\aycaa\\source\\repos\\UP_School_WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj",
+        "projectPath": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\WebAPI\\UP_School_WebAPI\\UP_School_WebAPI.csproj",
         "packagesPath": "C:\\Users\\aycaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aycaa\\source\\repos\\UP_School_WebAPI\\UP_School_WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\WebAPI\\UP_School_WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
