@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yNEAGqoyC4Yb9Df9c5vO89fIGELE+RlR+tN93RC8UXKd5Wf0yeVVv66zU2JFmTjC3yP5uISElgiK6VwkHvfUaw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\14may\\source\\repos\\UpSchool_SignalR_Api2\\WebApplication1\\WebApplication1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\14may\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
+  "logs": []
+}

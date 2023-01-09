@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "XVSr7/0upjRBcz15bkA+c0QqwFldgEk9aQ+Kecx7jfAA0EZTPbzOJXprG53b2ZyBDSHouFPSgHA9S5Eorvwpgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\UpSchool_SignalR_Api\\WebApplication1\\WebApplication1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aycaa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.30\\microsoft.netcore.app.host.win-x64.3.1.30.nupkg.sha512",
+    "C:\\Users\\aycaa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\aycaa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\aycaa\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
