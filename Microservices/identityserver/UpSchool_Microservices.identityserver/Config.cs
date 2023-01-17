@@ -2,6 +2,8 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
+using IdentityServer4;
+
 using IdentityServer4.Models;
 using System.Collections.Generic;
 
@@ -9,18 +11,27 @@ namespace UpSchool_Microservices.identityserver
 {
     public static class Config
     {
-        public static IEnumerable<IdentityResource> IdentityResources =>
-                   new IdentityResource[]
+        public static IEnumerable<ApiResource> ApiResources =>
+                   new ApiResource[]
                    {
-                new IdentityResources.OpenId(),
-                new IdentityResources.Profile(),
+                        new ApiResource("Resource_Catalogue"){Scopes={"Catalogue_FullPermission"} },
+                        new ApiResource("Resource_Order"){Scopes={ "Order_FullPermission" } },
+                        new ApiResource("Resource_Discount"){Scopes={"Discount_FullPermission"} },
+                        new ApiResource("Resource_Basket"){Scopes={ "Basket_FullPermission" } },
+                        new ApiResource("Resource_Payment"){Scopes={ "Payment_FullPermission" } },
+                        new ApiResource("Resource_Photo_Stock"){Scopes={ "Photo_Stock_FullPermission" } },
                    };
 
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
-                new ApiScope("scope1"),
-                new ApiScope("scope2"),
+                new ApiScope("Catalogue_FullPermission", "Full permission for the Catalogue api"),
+                new ApiScope("Order_FullPermission", "Full permission for the Order api"),
+                new ApiScope("Discount_FullPermission", "Full permission for the Discount api"),
+                new ApiScope("Basket_FullPermission", "Full permission for the Basket api"),
+                new ApiScope("Payment_FullPermission", "Full permission for the Payment api"),
+                new ApiScope("Photo_Stock_FullPermission", "Full permission for the Photo Stock api"),
+                new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
         public static IEnumerable<Client> Clients =>
@@ -33,9 +44,11 @@ namespace UpSchool_Microservices.identityserver
                     ClientName = "Client Credentials Client",
 
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    ClientSecrets = { new Secret("511536EF-F270-4058-80CA-1C89C192F69A".Sha256()) },
+                    ClientSecrets = { new Secret("secret".Sha256()) },
 
-                    AllowedScopes = { "scope1" }
+                    AllowedScopes = { "Catalogue_FullPermission", "Order_FullPermission","Discount_FullPermission", "Basket_FullPermission", "Payment_FullPermission", "Photo_Stock_FullPermission" 
+                    ,IdentityServerConstants.LocalApi.ScopeName}
+                   
                 },
 
                 // interactive client using code flow + pkce

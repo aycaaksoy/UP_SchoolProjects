@@ -59,9 +59,9 @@ namespace UpSchool_Microservices.identityserver
                     {
                         userManager.CreateAsync(new ApplicationUser
                         {
-                            UserName="halki",
-                            Email="halki@gmail.com",
-                            City="enschede"
+                            UserName = "halki",
+                            Email = "halki@gmail.com",
+                            City = "enschede"
                         }, "123456Aa*"
                         ).Wait();
                     }
