@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "faDICaZpwCNBEulkFqCztz2LlvXhqTnQovStc+hPbhoPkq6kfvH+8a5TSKjlEeu1MyJPvfFHw45SdHVJk1/zwQ==",
+  "dgSpecHash": "2NLtlUoiKSODMC1pRmZD3c6tGL5kv508rppRNDj5FqtN92CPheweXLBNiaqlK8VrRopO6jWEAndyfY1h+uvXxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aycaa\\source\\repos\\UpSchool_Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj",
+  "projectFilePath": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aycaa\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\aycaa\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

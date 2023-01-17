@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7q2yRWS+6d0FpBUZxKX+eVceyXXiZ1a8MAxbWTNZ/hYczzihVsv2CZ4qMiye4hsASRhp6r5wDe0tv8n32HTgtw==",
+  "dgSpecHash": "xNfpaUe2Q+qTQwocu8C1P4APIJHBPmjrsbPy0HtuAoOyeuBao260gusxbo8fA8kl8bLACm82jCqiEts4F/fM7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aycaa\\source\\repos\\UpSchool_Microservices\\Services\\Catalogue\\UpSchool_ECommerce.Services.Catalogue\\UpSchool_ECommerce.Services.Catalogue.csproj",
+  "projectFilePath": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\Microservices\\Services\\Catalogue\\UpSchool_ECommerce.Services.Catalogue\\UpSchool_ECommerce.Services.Catalogue.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aycaa\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\aycaa\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

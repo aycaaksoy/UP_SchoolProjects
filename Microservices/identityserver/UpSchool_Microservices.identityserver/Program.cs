@@ -3,6 +3,8 @@
 
 
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -11,6 +13,8 @@ using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 using System;
 using System.Linq;
+using UpSchool_Microservices.identityserver.Data;
+using UpSchool_Microservices.identityserver.Models;
 
 namespace UpSchool_Microservices.identityserver
 {
@@ -44,6 +48,24 @@ namespace UpSchool_Microservices.identityserver
                 }
 
                 var host = CreateHostBuilder(args).Build();
+
+                using (var scope = host.Services.CreateScope())
+                {
+                    var serviceProvider = scope.ServiceProvider;
+                    var applicationDbContext = serviceProvider.GetRequiredService<ApplicationDbContext>();
+                    applicationDbContext.Database.Migrate();
+                    var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+                    if (!userManager.Users.Any())
+                    {
+                        userManager.CreateAsync(new ApplicationUser
+                        {
+                            UserName="halki",
+                            Email="halki@gmail.com",
+                            City="enschede"
+                        }, "123456Aa*"
+                        ).Wait();
+                    }
+                }
 
                 if (seed)
                 {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aycaa\\source\\repos\\UpSchool_Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj": {}
+    "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aycaa\\source\\repos\\UpSchool_Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj": {
+    "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aycaa\\source\\repos\\UpSchool_Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj",
         "projectName": "UpSchoolECommerce.Shared",
-        "projectPath": "C:\\Users\\aycaa\\source\\repos\\UpSchool_Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj",
+        "projectPath": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\Microservices\\Shared\\UpSchoolECommerce.Shared\\UpSchoolECommerce.Shared.csproj",
         "packagesPath": "C:\\Users\\aycaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aycaa\\source\\repos\\UpSchool_Microservices\\Shared\\UpSchoolECommerce.Shared\\obj\\",
+        "outputPath": "C:\\Users\\aycaa\\source\\repos\\UP_SchoolProjects\\Microservices\\Shared\\UpSchoolECommerce.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
